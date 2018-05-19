@@ -31,8 +31,6 @@ $epost['article-meta-value'] = get_xpath_nodevalue($result[0], '//*[@id="main-co
 $epost['text'] = array_filter(get_xpath_nodevalue($result[0], '//*[@id="main-content"]/text()'));
 $epost['f2'] = get_xpath_nodevalue($result[0], '//*[@id="main-content"]//*[@class="f2"]');
 $epost['push'] = get_xpath_nodevalue($result[0], '//*[@id="main-content"]//*[@class="push"]');
-// 文章主要內容
-// var_dump($epost);
 
 
 // 針對文章的 push 分析
@@ -45,10 +43,17 @@ foreach ($push_result as $key => $value) {
 	$epostpush[$key]['push-content'] = get_xpath_nodevalue($value, '//*[@class="push"]/*[@class="f3 push-content"]');
 	$epostpush[$key]['push-ipdatetime'] = get_xpath_nodevalue($value, '//*[@class="push"]/*[@class="push-ipdatetime"]');
 }
-// 文章推文內容
-// var_dump($epostpush);
 
-echo json_encode($epost);
-echo json_encode($epostpush);
+
+
+// 文章索引
+echo "PTT文章檔案：".$file."\n";
+echo "文章主要內容解析後：\n";
+var_dump($epost);
+//echo json_encode($epost);
+
+echo "文章推文解析後：\n";
+var_dump($epostpush);
+//echo json_encode($epostpush);
 
 ?>

@@ -12,8 +12,8 @@ include dirname(__FILE__)."/lib.php";
 
 // 取得檔案
 $file = "./pttdata/NBA/index.html";
-//$url = "https://www.ptt.cc/bbs/NBA/index5922.html";
-$html = file_get_contents($url);
+//$file = "https://www.ptt.cc/bbs/NBA/index5922.html";
+$html = file_get_contents($file);
 
 
 // PTT index title 標題列, 檔名
@@ -59,8 +59,8 @@ foreach ($result as $key => $value) {
 }
 
 // 文章索引
-// var_dump($board);
-
-echo json_encode($board);
+echo "PTT版面索引檔案：".$file."\n";
+echo "解析後的內容：\n";
+var_dump($board);
 
 ?>
