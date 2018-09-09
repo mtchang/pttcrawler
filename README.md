@@ -1,11 +1,11 @@
-### PTT版面索引及文章網頁分析
+#### PTT版面索引及文章網頁分析
 
 * 下載到 Linux 目錄
 ```
 # git clone git@github.com:mtchang/pttcrawler.git
 ```
 
-#### 執行分析PTT版面索引
+* 執行分析PTT版面索引
 ```
 # php cw_index.php
 ```
@@ -23,7 +23,7 @@ array(10) {
 ...
 ```
 
-#### 執行分析PTT文章
+* 執行分析PTT文章
 ```
 php cw_post.php 
 ```
